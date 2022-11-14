@@ -1,8 +1,7 @@
 # append a user to the end of the file, creates file if it does not exist
 def add_user(user):
-    f = open('users.txt', 'a')
-    f.write(f"{user}\n")
-    f.close()
+    with open('users.txt', 'a') as f:
+        f.write(f"{user}\n")
 
 # places all names into a list, changes the list to update users, overwrites file with new set of names
 def update_user(old, new):
